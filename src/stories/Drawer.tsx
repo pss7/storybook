@@ -82,7 +82,7 @@ function Drawer({ children }: DrawerProps) {
                             data.map((data, key) => (
                                 <li key={key}>
                                     <BrowserRouter>
-                                        <Link to={data.href}>
+                                        <Link to={data.href} className="textHover">
                                             {data.link}
                                         </Link>
                                     </BrowserRouter>
@@ -121,7 +121,6 @@ z-index: 999;
 const ListWrap = styled.ul`
 margin-top: 25px;
 a{
-    position: relative;
     margin-bottom: -1px;
     padding: 12px 0 12px 12px;
     display: block;
@@ -129,21 +128,6 @@ a{
     border: 1px solid #ececec;
     border-width: 0 0 1px;
     font-weight: 500;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 1px;
-        background-color: #000;
-        transition: all .5s;
-      }
-      &:hover::before{
-        content: '';
-        width: 100%;
-        height: 2px;
-      }
 }
 `;
 

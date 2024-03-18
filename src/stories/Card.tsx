@@ -44,7 +44,7 @@ function Card({ id, className, title, description, imageAlt, imageSrc }: CardPro
             <GlobalStyle />
             <CardItem>
                 <BrowserRouter>
-                    <Link to="">
+                    <Link to="" className={className}>
                         <div className="imgBox">
                             <img alt={imageAlt} src={imageSrc} />
                         </div>
@@ -62,11 +62,14 @@ function Card({ id, className, title, description, imageAlt, imageSrc }: CardPro
 
 const CardItem = styled.div`
 flex: 1;
-padding: 10px 10px 30px 10px;
-overflow: hidden;
-box-shadow: 3px 3px 8px rgba(0,0,0,.1);
-border-radius: 10px;
-background-color: ##fcfcfc;
+
+a{
+    display: block;
+    padding: 10px 10px 30px 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    background-color: #fcfcfc;
 .imgBox{
     position: relative;
     padding-top: 60%;
@@ -103,7 +106,7 @@ background-color: ##fcfcfc;
         -webkit-line-clamp: 3; 
         -webkit-box-orient: vertical;
     }
-
+}
 }
 
 `;

@@ -38,6 +38,40 @@ footer, header, hgroup, menu, nav, section {display: block;}
 @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
 @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
 
+a.textHover{
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: #000;
+        transition: all .5s;
+      }
+      &:hover::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+      }
+}
+
+a.imgHover{
+  position: relative;
+  .imgBox{
+    overflow:hidden;
+    img{
+      transition: all .5s;
+    }
+  &:hover{
+      img{
+        transform:scale(1.2);
+      }
+    }
+   }
+ }
+
 `;
 
 export default GlobalStyle;
