@@ -225,7 +225,7 @@ const ContentInfoTitle = styled.dt`
 font-weight: 500;
 `;
 
-const ContentInfoDesc = styled.dl`
+const ContentInfoDesc = styled.dd`
     font-weight: 300;
 `;
 
