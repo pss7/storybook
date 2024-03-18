@@ -1,16 +1,9 @@
 import GlobalStyle from "../GlobalStyle";
 import styled from 'styled-components';
 
-export interface TableProps {
+function Table() {
 
-    className?: string;
-    data?: Array<any>;
-
-}
-
-function Table({ className }: TableProps) {
-
-    const data = [
+    const data: Array<any> = [
         {
             title: 'text',
             desc: 'content'

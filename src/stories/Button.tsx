@@ -51,9 +51,9 @@ function Button({ children, id, className, title, type, onClick, disabled, label
         <>
             <CommonButton
                 id={id}
+                className={className}
                 title={title}
                 type={type}
-                className={className}
                 onClick={onClick}
                 disabled={disabled}
             >

@@ -68,9 +68,9 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-box-shadow: 3px 3px 15px rgba(0, 0, 0, .1);
+box-shadow: 3px 3px 7px rgba(0, 0, 0, .1);
 border-radius: 10px;
-background-color: #fff;
+background-color: #f4f4f8;
 transition: all .5s;
 &.active{
     opacity: 1;
@@ -82,6 +82,9 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 font-size: 30px;
+}
+button{
+    background: 0;
 }
 `;
 

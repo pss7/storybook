@@ -1,6 +1,9 @@
 import React from "react";
 import GlobalStyle from "../GlobalStyle";
 import styled from 'styled-components';
+import CommonButton from "./Button";
+
+import SearchIcon from '@mui/icons-material/Search';
 
 export interface InputProps {
 
@@ -35,24 +38,19 @@ export interface InputProps {
     name?: string;
 
     /**
-* 웹 접근성을 위한 텍스트 숨김처리를 적용합니다.
-*/
-    blind?: string;
-
-    /**
 * 값을 적용합니다.
 */
     value?: string;
 
 }
 
-function Input({ id, label, name, type, placeholder, className, blind, value }: InputProps) {
+function Input({ id, label, name, type, placeholder, className, value }: InputProps) {
 
     return (
         <>
             <GlobalStyle />
             <InputBox className="inputBox">
-                <label htmlFor={id} className={blind}>{label}</label>
+                <label htmlFor={id} className="blind">{label}</label>
                 <input
                     className={className}
                     name={name}
@@ -60,6 +58,9 @@ function Input({ id, label, name, type, placeholder, className, blind, value }: 
                     type={type}
                     placeholder={placeholder}
                 />
+                <SearchButton type="submit">
+                    <SearchIcon style={{ fill: '#8c8c8c' }}/>
+                </SearchButton>
             </InputBox>
         </>
     )
@@ -68,13 +69,34 @@ function Input({ id, label, name, type, placeholder, className, blind, value }: 
 
 const InputBox = styled.div`
 
+position: relative;
+
 input{
-    padding: 5px 20px;
-    border-radius: 10px;
+    padding: 7px 20px 7px 40px;
+    border-radius: 50px;
     border: 1px solid #c5c5c5;
+    font-size: 14px;
 }
 
 `;
+
+const SearchButton = styled(CommonButton)`
+
+position: absolute;
+top: 50%;
+left:9px;
+transform: translateY(-50%);
+height: 90%;
+box-shadow: none;
+padding:0;
+font-size: 0;
+curser:pointer;
+&:hover{
+    background: none;
+    color: #000;
+}
+`;
+
 
 
 export default Input

@@ -11,4 +11,10 @@ export default {
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 
 export const Basic = Template.bind({});
-Basic.args = {};
+Basic.args = {
+    id: "",
+    className: "",
+    name : "",
+    type : "",
+    placeholder : "검색어를 입력해주세요."
+};

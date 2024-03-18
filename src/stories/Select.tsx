@@ -15,6 +15,11 @@ export interface SelectProps {
     className?: string;
 
     /**
+* label에 들어갈 내부 텍스트를 적용합니다.
+*/
+    label?: string;
+
+    /**
 * name을 적용합니다.
 */
     name?: string;
@@ -34,14 +39,9 @@ export interface SelectProps {
 */
     disabled?: boolean;
 
-    /**
-* 웹 접근성을 위한 텍스트 숨김처리를 적용합니다.
-*/
-    blind?: string;
-
 }
 
-function Select({ disabled, className, value, id, name, blind }: SelectProps) {
+function Select({ disabled, className, value, id, name, label }: SelectProps) {
 
     const [select, setSelect] = useState('');
 
@@ -75,7 +75,9 @@ function Select({ disabled, className, value, id, name, blind }: SelectProps) {
             <SelectBox>
                 <label
                     htmlFor={id}
-                    className={blind}></label>
+                    className="blind">
+                    {label}
+                </label>
                 <select
                     className={className}
                     name={name}
@@ -102,8 +104,8 @@ function Select({ disabled, className, value, id, name, blind }: SelectProps) {
 const SelectBox = styled.div`
 
 select{
-    padding: 5px 20px 5px 10px;
-    border-radius: 10px;
+    padding: 4px 20px 4px 10px;
+    border-radius: 5px;
     border: 1px solid #c5c5c5;
     cursor: pointer;
 }

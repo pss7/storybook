@@ -11,4 +11,10 @@ export default {
 const Template: Story<SelectProps> = (args) => <Select {...args} />;
 
 export const Basic = Template.bind({});
-Basic.args = {};
+Basic.args = {
+    id: "",
+    className: "",
+    label: "select",
+    name : "",
+    value : ""
+};

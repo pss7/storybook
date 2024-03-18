@@ -3,7 +3,6 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import GlobalStyle from "../GlobalStyle";
 import styled from 'styled-components';
 
-import Button from './Button';
 import CommonButton from './Button';
 import CloseIcon from '@mui/icons-material/Close';
 import WidgetsIcon from '@mui/icons-material/Widgets';
@@ -105,7 +104,7 @@ function Drawer({ children }: DrawerProps) {
 }
 
 const MenuWrap = styled.div`
-padding: 20px 20px 0;
+padding: 20px 45px 20px 20px;
 position: fixed;
 top: 0;
 left: -300px;
