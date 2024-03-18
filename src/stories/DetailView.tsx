@@ -221,7 +221,7 @@ display: flex;
 gap: 0 5px;
 `;
 
-const ContentInfoTitle = styled.dl`
+const ContentInfoTitle = styled.dt`
 font-weight: 500;
 `;
 
